@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace UnitTestSample.Domain
 {
@@ -16,9 +17,14 @@ namespace UnitTestSample.Domain
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
 
-        public void Book()
+        public DateTime Book(DateTime starDateTime, DateTime endDateTime, List<DateTime> books)
         {
+            if (books.Contains(StartTime))
+            {
+                throw  new Exception("Sala já reserada nesse horário");
+            }
 
+            return starDateTime;
         }
     }
 }

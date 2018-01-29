@@ -48,6 +48,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Contracts\IBookRepository.cs" />
+    <Compile Include="Domain\FakeRepository\BookFakeRepository.cs" />
     <Compile Include="Domain\Room.cs" />
     <Compile Include="RoomTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
